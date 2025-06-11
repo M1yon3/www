@@ -17,6 +17,7 @@ padding: 20px;}
 .product-image｛
     width: 100%;
     display: block;
+    magin: 0 auto 20px;
 ｝
 
 .product-info p {
