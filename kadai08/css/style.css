@@ -49,3 +49,8 @@ footer {
   background-color: #ccc;
 }
 
+.small-img {
+  width: 100px;     /* 横幅を小さく */
+  height: 75px;     /* 高さも小さく */
+  object-fit: cover;  /* トリミングして表示 */
+}
