@@ -52,5 +52,6 @@ footer {
 uniform-img {
   width: 200px;
   height: 150px;
-  object-fit: cover;
+  object-fit: cover
+  display: block;
 }
