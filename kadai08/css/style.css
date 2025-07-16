@@ -56,3 +56,11 @@ footer {
   display: block;      
   margin: 10px auto;   
 }
+
+.uniform-img {
+  width: 250px;           
+  height: 170px;
+  object-fit: cover;
+  display: block;       
+  margin: 0 auto;         
+}
