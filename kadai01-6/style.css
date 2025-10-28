@@ -1,0 +1,29 @@
+table {
+
+    border-collapse: collapse;
+
+    width: 400px;
+
+  }
+
+  th, td {
+
+    border: 1px solid #555;
+
+    padding: 8px;
+
+    text-align: center;
+
+  }
+
+  th {
+
+    background-color: #f6b26b;
+
+  }
+
+  h1 {
+
+    font-size: 24px;
+
+  }
