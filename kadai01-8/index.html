@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>複数の要素の取得</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>要素の追加と削除</title>
+<style>
+   #photoList img {
+     width: 150px;
+     margin: 5px;
+   }
+</style>
 </head>
 <body>
-   <h1>人口の多い国ランキング</h1> 
-   <ol>
-    <li id="country1">中国</li>
-    <li id="country2">インド</li>
-    <li id="country3">アメリカ</li>
-    <li id="country4">インドネシア</li>
-   </ol>
-
-   <button onclick="changeToFlag()">国旗で表示</button>
-
-   <script>
-   function changeToFlag() {
-     document.getElementById("country1").innerHTML = '<img src="flag_CHN.png" alt="中国" width="100">';
-     document.getElementById("country2").innerHTML = '<img src="flag_IND.png" alt="インド" width="100">';
-     document.getElementById("country3").innerHTML = '<img src="flag_USA.png" alt="アメリカ" width="100">';
-     document.getElementById("country4").innerHTML = '<img src="flag_IDN.png" alt="インドネシア" width="100">';
-   }
+<h1>写真の一覧</h1>
+<div id="photoList"></div>
+<button id="showBtn">写真を表示</button>
+<script>
+   const btn = document.getElementById('showBtn');
+   const photoList = document.getElementById('photoList');
+   btn.addEventListener('click', () => {
+     let html = '';
+     for (let i = 1; i <= 8; i++) {
+       html += `<img src="photo_${i}.jpg" alt="写真${i}">`;
+     }
+     photoList.insertAdjacentHTML('beforeend', html);
+     btn.remove();
+   });
 </script>
 </body>
 </html>
