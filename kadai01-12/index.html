@@ -3,20 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Click Counter ★ for構文</title>
-<style>
-
-    body { text-align: center; font-family: sans-serif; }
-
-    button { padding: 12px 40px; font-size: 20px; margin-top: 20px; cursor: pointer; }
-
-    #result { margin-top: 25px; font-size: 22px; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Click Counter ★ for構文</h1>
-<p>クリック回数：<span id="count">0</span> 回</p>
+<p class="subtitle">ボタンをクリックすると、クリック回数に応じて結果が変わります。<br>
+   JavaScript の for 構文を使って処理を作ってみましょう。</p>
+<div class="card">
+<p class="label">クリック回数 <span id="count">0</span> 回</p>
 <button id="btn">クリック</button>
+<p class="label">結果</p>
 <div id="result">ここに結果が表示されます</div>
+</div>
+<footer>© JavaScript Practice – for構文 & クリックイベント</footer>
 <script src="script.js"></script>
 </body>
 </html>
