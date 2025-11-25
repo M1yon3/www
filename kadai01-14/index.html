@@ -31,16 +31,14 @@
 <button onclick="check(5)">x = 5</button>
 <div id="result"></div>
 
-<script>
-function check(x) {
- if (x === 2) {
-    document.getElementById('result').textContent= "正解！";
-    } else if (x === 4) {
-    document.getElementById('result').textContent= "正解！";
-    } else {
-     document.getElementById('result').textContent= "間違い！";
-    }
-}
+<script>{
+ let result = document.getElementById("result");
+       if (x === 2 || x === 4){
+           result.textContent = "正解！";
+       } else {
+           result.textContent = "間違い！";
+       }
+   }
 </script>
 
 </body>
