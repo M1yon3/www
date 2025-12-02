@@ -1,24 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
 <title>breakの活用</title>
 <style>
-body {
-    font-family: sans-serif;
-            margin: 30px;
-        }
-        button {
-            margin: 5px;
-            padding: 8px 16px;
-        }
-        #result {
-            font-size: 28px;
-            margin-top: 20px;
-        }
-    
+ .big_font {
+   font-size: 36px;
+   margin-top: 20px;
+ }
 </style>
 </head>
 
@@ -29,27 +18,24 @@ body {
 <p>※この方程式の解は3個あり、すべて1以上の整数です。</p>
 <button onclick="show()">結果を見る</button>
 <div id="message" class="big_font"></div>
- 
- <script>
-let anser = [];
-    let count = 0;
 
-    for (let x = 1; x <= 1000; x++) {
-
-
-        if (x*x*x - 53*x*x + 620*x - 1036 === 0) {
-            anser.push(x);
-            count++;
-
-            if (count === 3) {
-                break;
-            }
-        }
-    }
-    document.getElementById("message").textContent =
-        anser.join("、 ") + " が解です。";
- </script>
-
+<script>
+function show() {
+ let anser = [];
+ let count = 0;
+ for (let x = 1; x <= 1000; x++) {
+   let result = x*x*x - 53*x*x + 620*x - 1036;
+   if (result === 0) {
+     anser[count] = x;
+     count++;
+   }
+   if (count === 3) {
+     break;
+   }
+ }
+ document.getElementById("message").innerHTML =
+   anser[0] + "、" + anser[1] + "、" + anser[2] + " が解です。";
+}
+</script>
 </body>
-
 </html>
