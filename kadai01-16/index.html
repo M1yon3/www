@@ -17,6 +17,7 @@
 <p>※この方程式の解は3個あり、すべて1以上の整数です。</p>
 <button onclick="show()">結果を見る</button>
 <div id="message" class="big_font"></div>
+<script>
 function show() {
    let anser = [];
    let count = 0;
@@ -35,5 +36,6 @@ function show() {
    document.getElementById("message").textContent =
        anser.join("、 ") + " が解です。";
 }
+</script>
 </body>
 </html>
