@@ -17,25 +17,23 @@
 <p>※この方程式の解は3個あり、すべて1以上の整数です。</p>
 <button onclick="show()">結果を見る</button>
 <div id="message" class="big_font"></div>
-<script>
 function show() {
-    let anser =[];
- let count = 0;
- let x = 1;
- while (x <= 1000) {
-   let result = x*x*x - 53*x*x + 620*x - 1036;
-   if (result === 0) {
-     anser[count] = x;
-     count++;
+   let anser = [];
+   let count = 0;
+   let x = 1;
+   while (true) {
+       let y = x*x*x - 53*x*x + 620*x - 1036;
+       if (y === 0) {
+           anser.push(x);
+           count++;
+           if (count === 3) {
+               break;
+           }
+       }
+       x++;
    }
-   if (count === 3) {
-     break;
-   }
-x++;
- }
- document.getElementById("message").innerhtml =
-   anser[0] + "、" + anser[1] + "、" + anser[2] + " が解です。";
+   document.getElementById("message").textContent =
+       anser.join("、 ") + " が解です。";
 }
-</script>
 </body>
 </html>
