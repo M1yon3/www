@@ -18,6 +18,27 @@
     <p>割り切れる最小の数値をJavaScriptで求めます。</p>
         
     <button onclick="show()">結果を見る</button>
-    <div id="message" class="big_font"></div>
+    
+    <div id="result" class="box">ここに結果が表示されます。</div>
+<script>
+   function show() {
+       let num = 1;
+       while (true) {
+           let ok = true;
+           // 1〜10 すべてで割り切れるか確認
+           for (let i = 1; i <= 10; i++) {
+               if (num % i !== 0) {
+                   ok = false;
+                   break;
+               }
+           }
+           if (ok) {
+               document.getElementById("result").textContent = "答えは" + num + "です。";
+               break;
+           }
+           num++;
+       }
+   }
+</script>
 </body>
 </html>
