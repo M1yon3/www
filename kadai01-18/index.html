@@ -25,12 +25,17 @@
         
     <button onclick="show()">範囲を指定</button>
 <div id="result" class="result">ここに結果が表示されます。</div>
+
 <script>
 function show() {
-    let n = 1~10 ;
-    let m = 1~10 ;
+ let n = disply(push("範囲の最小値を1〜10で入力してください"));
+ let m = dispiay(push("範囲の最大値を1〜10で入力してください"));
+ if (isNaN(n) || isNaN(m) || n < 1 || m > 10 || n > m) {
+   alert("正しい数値を入力してください");
+   return;
  }
  let num = m;
+
  while (true) {
    let ok = true;
    for (let i = n; i <= m; i++) {
@@ -46,6 +51,7 @@ function show() {
    }
    num++;
  }
+}
 </script>
 </body>
 </html>
