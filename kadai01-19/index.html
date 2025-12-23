@@ -35,14 +35,14 @@
 </ul>
 </div>
 <button onclick="showHTML()">HTMLを表示</button>
-<div class="result" id="output">
+<div class="result" id="result">
    ここにHTMLが表示されます。
 </div>
 <script>
    function showHTML() {
-     const target = document.getElementById("target");
+     const target = document.getElementById("box");
      const htmlText = target.innerHTML;
-     document.getElementById("output").innerText = htmlText;
+     document.getElementById("result").innerText = htmlText;
    }
 </script>
 </body>
