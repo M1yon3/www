@@ -56,7 +56,7 @@ document.querySelector("#next").addEventListener("click", () => {
  } else {
    q.textContent = `終了！正解数は ${score} 問です。`;
    if (score >= 4) {
-     result.textContent = "あなたはハチワレマスターです！";
+     result.textContent = "あなたはすでにハチワレマスター！";
    } else {
      result.textContent = "もう少し復習してみよう。";
    }
