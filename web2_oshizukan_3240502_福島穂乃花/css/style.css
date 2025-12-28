@@ -39,6 +39,6 @@ figure:hover {
 }
 @media (max-width: 600px) {
  .card {
-   width: 100%;
+   width: 90%;
  }
 }
